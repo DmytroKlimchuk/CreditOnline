@@ -1,0 +1,42 @@
+
+.contact-section {
+    padding-top: 40px;
+}
+
+.form-line{
+    border-right: 1px solid #B29999;
+    padding-right: 30px;
+}
+
+.form-group{
+    margin-top: 10px;
+    overflow: hidden;
+}
+label{
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: normal;
+}
+.form-control{
+    font-size: 1.3em;
+    color: #080808;
+}
+textarea.form-control {
+    height: 135px;
+    /* margin-top: px;*/
+}
+
+.submit{
+    font-size: 1.1em;
+    float: right;
+    width: 150px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid white;
+    outline: 0;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.submit i{
+    margin-right: 5px;
+}
