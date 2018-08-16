@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
 //My Components
 import Header from './components/header/header';
 import ClientInfo from './components/clientInfo/clientInfo';

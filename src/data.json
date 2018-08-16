@@ -1,0 +1,42 @@
+[
+    {
+        "name" : "John",
+        "surname" : "Smith",
+        "amount" : 100, 
+        "term" : 11,
+        "rate" : 5,
+        "total" : 200
+    },
+    {
+        "name" : "Andrew",
+        "surname" : "Smith",
+        "amount" : 100, 
+        "term" : 11,
+        "rate" : 5,
+        "total" : 200
+    },
+    {
+        "name" : "Adam",
+        "surname" : "Jonson",
+        "amount" : 100, 
+        "term" : 11,
+        "rate" : 5,
+        "total" : 200
+    },
+    {
+        "name" : "Bill",
+        "surname" : "Gates",
+        "amount" : 100, 
+        "term" : 11,
+        "rate" : 5,
+        "total" : 200
+    },
+    {
+        "name" : "Bob",
+        "surname" : "Sincler",
+        "amount" : 100, 
+        "term" : 11,
+        "rate" : 5,
+        "total" : 200
+    }
+]
