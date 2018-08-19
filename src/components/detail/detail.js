@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import './detail.css';
-import data from '../../data.json';
 
 class Detail extends Component {
 
-    state = {
-        ad : data
+    selectClient = (item) => (event) => {
+        console.log(item);
+        this.props.setActive(item);
     }
 
-    selectClient = (event) => {
-        console.log('click');
-    }
-
-    item = this.state.ad.map( (item) => {
+    item = this.props.data.map( (item) => {
         return (
-            <tr onClick={ this.selectClient }>
+            <tr onClick={ this.selectClient(item) } key={item.name+item.surnname}>
                 <td>{ item.name }</td>
                 <td>{ item.surname }</td>
                 <td>{ item.amount }</td>
@@ -23,9 +19,7 @@ class Detail extends Component {
         );
     });
 
-
     render () {
-        console.log(this.state.ad);
         return (
             <div className="detail">
                 <table className="table">

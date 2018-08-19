@@ -2,10 +2,10 @@
     {
         "name" : "John",
         "surname" : "Smith",
-        "amount" : 100, 
-        "term" : 11,
-        "rate" : 5,
-        "total" : 200
+        "amount" : 250, 
+        "term" : 10,
+        "rate" : 4,
+        "total" : 350
     },
     {
         "name" : "Andrew",
@@ -18,25 +18,25 @@
     {
         "name" : "Adam",
         "surname" : "Jonson",
-        "amount" : 100, 
-        "term" : 11,
-        "rate" : 5,
-        "total" : 200
+        "amount" : 900, 
+        "term" : 21,
+        "rate" : 6,
+        "total" : 1000
     },
     {
         "name" : "Bill",
         "surname" : "Gates",
-        "amount" : 100, 
-        "term" : 11,
-        "rate" : 5,
-        "total" : 200
+        "amount" : 350, 
+        "term" : 7,
+        "rate" : 8,
+        "total" : 430
     },
     {
         "name" : "Bob",
         "surname" : "Sincler",
-        "amount" : 100, 
-        "term" : 11,
-        "rate" : 5,
-        "total" : 200
+        "amount" : 400, 
+        "term" : 1,
+        "rate" : 2,
+        "total" : 500
     }
 ]

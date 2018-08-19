@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './creditDetail.css';
 
 class CreditDetail extends Component {
+
     render () {
+        console.log( this.props.active );
         return (
             <div className="credit-detail">
-            <h3>Credit Detail</h3>
+                <h3>Credit Detail</h3>
                 <table className="table">
                     <tbody>
                         <tr>
@@ -17,12 +19,12 @@ class CreditDetail extends Component {
                             <th>Total laan</th>
                         </tr>
                         <tr>
-                            <td>Name 1</td>
-                            <td>Surname 1</td>
-                            <td>100</td>
-                            <td>12</td>
-                            <td>Laan rate</td>
-                            <td>Total laan</td>
+                            <td>{ this.props.active.name }</td>
+                            <td>{ this.props.active.surname }</td>
+                            <td>{ this.props.active.amount }</td>
+                            <td>{ this.props.active.term }</td>
+                            <td>{ this.props.active.rate }</td>
+                            <td>{ this.props.active.total }</td>
                         </tr>
                     </tbody>
                 </table>
