@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 import './detail.css';
+import { Link } from "react-router-dom";
 
 class Detail extends Component {
+
+    state = {
+        items : this.props.data
+    }
 
     selectClient = (item) => (event) => {
         console.log(item);
         this.props.setActive(item);
     }
 
-    item = this.props.data.map( (item) => {
-        return (
+    Search = (event) => {
+        let { value } = event.target;
+        //console.log( value );
+
+        let newItems = this.state.items.filter( ( item ) => {
+            return item.name.indexOf(value) >= 0
+        });
+
+        console.log(newItems );
+        this.setState({
+            items: newItems
+        })
+
+    }
+
+    item = this.state.items.map( (item) => {
+        return (            
             <tr onClick={ this.selectClient(item) } key={item.name+item.surnname}>
-                <td>{ item.name }</td>
-                <td>{ item.surname }</td>
-                <td>{ item.amount }</td>
-                <td>{ item.term }</td>
+                <td><Link to={ `/detail/${item.id}` }>{ item.name }</Link></td>
+                <td><Link to={ `/detail/${item.id}` }>{ item.surname }</Link></td>
+                <td><Link to={ `/detail/${item.id}` }>{ item.amount }</Link></td>
+                <td><Link to={ `/detail/${item.id}` }>{ item.term }</Link></td>
             </tr>
         );
     });
@@ -22,6 +42,7 @@ class Detail extends Component {
     render () {
         return (
             <div className="detail">
+                <input type="text" placeholder="Пошук по імені" onInput={ this.Search }/>
                 <table className="table">
                     <tbody>
                         <tr>

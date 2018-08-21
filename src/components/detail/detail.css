@@ -1,7 +1,6 @@
 tr td{
     font-size: 16px;
     text-transform: uppercase;
-    cursor: pointer;
     padding: 7px 10px;
 }
 
@@ -20,4 +19,24 @@ tr:last-child {
 
 .detail {
     padding-top: 40px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #fff;
+}
+
+input {
+    margin-bottom: 15px;
+    float: right;
+    width: 200px;
+    color: #000;
+}
+
+input:focus {
+    outline: 1px solid red;
 }

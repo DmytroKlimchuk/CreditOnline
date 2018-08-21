@@ -4,6 +4,16 @@
     font-size: 45px;
 }
 
+.content-header a{
+    font-family: 'Oleo Script', cursive;
+    color:#fcc500;
+    font-size: 45px;
+}
+
+.content-header a:hover{
+    color:#fcc500;
+    text-decoration: none;
+}
 .section-content{
     text-align: center;
 

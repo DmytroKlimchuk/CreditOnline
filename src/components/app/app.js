@@ -38,9 +38,9 @@ class App extends React.Component {
                     </div>
                 </div>
         
-                <div className="row">
+                {/* <div className="row">
                     <CreditDetail active={ this.state.active }/>
-                </div>  
+                </div>   */}
             </div>
         );
     }

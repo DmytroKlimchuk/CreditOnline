@@ -1,5 +1,6 @@
 [
     {
+        "id" : 1,
         "name" : "John",
         "surname" : "Smith",
         "amount" : 250, 
@@ -8,6 +9,7 @@
         "total" : 350
     },
     {
+        "id": 2,
         "name" : "Andrew",
         "surname" : "Smith",
         "amount" : 100, 
@@ -16,6 +18,7 @@
         "total" : 200
     },
     {
+        "id": 3,
         "name" : "Adam",
         "surname" : "Jonson",
         "amount" : 900, 
@@ -24,6 +27,7 @@
         "total" : 1000
     },
     {
+        "id": 4,
         "name" : "Bill",
         "surname" : "Gates",
         "amount" : 350, 
@@ -32,6 +36,7 @@
         "total" : 430
     },
     {
+        "id": 5,
         "name" : "Bob",
         "surname" : "Sincler",
         "amount" : 400, 
