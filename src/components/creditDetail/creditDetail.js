@@ -10,11 +10,11 @@ class CreditDetail extends Component {
     }
 
     render () {
-        console.log( this.props.match.params );
 
         let { id } = this.props.match.params;
 
         let item = this.state.data.filter( (item) => item.id == id)[0];
+        
 
         return (
             <div className="container">

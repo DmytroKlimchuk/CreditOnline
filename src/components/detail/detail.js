@@ -7,21 +7,23 @@ class Detail extends Component {
     state = {
         items : this.props.data
     }
-
+    
     selectClient = (item) => (event) => {
         console.log(item);
         this.props.setActive(item);
     }
 
     Search = (event) => {
+
         let { value } = event.target;
         //console.log( value );
-
+       
         let newItems = this.state.items.filter( ( item ) => {
-            return item.name.indexOf(value) >= 0
+            return item.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
         });
 
-        console.log(newItems );
+        console.log( newItems );
+
         this.setState({
             items: newItems
         })
@@ -53,6 +55,7 @@ class Detail extends Component {
                         </tr>
                         
                         { this.item }
+
                     </tbody>
                 </table>
             </div>

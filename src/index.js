@@ -9,7 +9,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render( 
+ReactDOM.render(
     < BrowserRouter>
         <div>
             <Route path="/detail/:id" component={CreditDetail} />
