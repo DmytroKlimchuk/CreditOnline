@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 class Detail extends Component {
 
     state = {
-        items : this.props.data
+        items : this.props.data,
+        originItems : this.props.data
     }
     
     selectClient = (item) => (event) => {
@@ -18,7 +19,7 @@ class Detail extends Component {
         let { value } = event.target;
         //console.log( value );
        
-        let newItems = this.state.items.filter( ( item ) => {
+        let newItems = this.state.originItems.filter( ( item ) => {
             return item.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
         });
 
@@ -30,18 +31,21 @@ class Detail extends Component {
 
     }
 
-    item = this.state.items.map( (item) => {
-        return (            
-            <tr onClick={ this.selectClient(item) } key={item.name+item.surnname}>
-                <td><Link to={ `/detail/${item.id}` }>{ item.name }</Link></td>
-                <td><Link to={ `/detail/${item.id}` }>{ item.surname }</Link></td>
-                <td><Link to={ `/detail/${item.id}` }>{ item.amount }</Link></td>
-                <td><Link to={ `/detail/${item.id}` }>{ item.term }</Link></td>
-            </tr>
-        );
-    });
+    renderItems = () => {
+        return this.state.items.map( (item) => {
+            return (            
+                <tr onClick={ this.selectClient(item) } key={item.name+item.surnname}>
+                    <td><Link to={ `/detail/${item.id}` }>{ item.name }</Link></td>
+                    <td><Link to={ `/detail/${item.id}` }>{ item.surname }</Link></td>
+                    <td><Link to={ `/detail/${item.id}` }>{ item.amount }</Link></td>
+                    <td><Link to={ `/detail/${item.id}` }>{ item.term }</Link></td>
+                </tr>
+            );
+        });
+    }
 
     render () {
+
         return (
             <div className="detail">
                 <input type="text" placeholder="Пошук по імені" onInput={ this.Search }/>
@@ -54,7 +58,7 @@ class Detail extends Component {
                             <th>Term</th>
                         </tr>
                         
-                        { this.item }
+                        { this.renderItems() }
 
                     </tbody>
                 </table>
